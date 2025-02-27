@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="flex flex-col items-center justify-start w-screen h-screen relative">
+    <!-- Carousel รูปภาพ -->
+    <div id="carousel-container">
+        <img id="carousel-image" src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Image Carousel">
+        <!-- ตัวบอกตำแหน่งสไลด์ -->
+        <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+            <div class="indicator w-2 h-2 rounded-full bg-white opacity-100"></div>
+            <div class="indicator w-2 h-2 rounded-full bg-white opacity-60"></div>
+            <div class="indicator w-2 h-2 rounded-full bg-white opacity-60"></div>
+        </div>
+    </div>
+    
+    <!-- Wrapper สำหรับจัดตำแหน่งไอคอนตรงกลาง -->
+    <div class="content-wrapper">
+        <!-- เมนูไอคอน 6 อัน -->
+        <div class="menu-grid grid grid-cols-3 gap-4">
+            <div class="menu-icon">
+                <i class="fa-solid fa-shuffle"></i>
+                <span>Random</span>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-regular fa-thumbs-up"></i>
+                <span>Recomment</span>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bookmark"></i>
+                <span>Bookmark</span>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-person-chalkboard"></i>
+                <span>Presenting the menu</span>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Map</span>
+            </div>
+            <div class="menu-icon">
+                <i class="fa-regular fa-message"></i>
+                <span>Review</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- แถบไอคอนด้านล่าง -->
+    <div class="bottom-bar">
+        <div class="bottom-icon"><i class="fas fa-home"></i></div>
+        <div class="bottom-icon"><i class="fas fa-user"></i></div>
+        <div class="bottom-icon"><i class="fas fa-cog"></i></div>
+    </div>
+</body>
+</html>
