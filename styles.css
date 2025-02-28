@@ -62,16 +62,16 @@ body {
     object-fit: cover;
 }
 
-/* คำนวณพื้นที่ระหว่างรูปและแถบล่าง */
+/* คำนวณพื้นที่ระหว่างรูปและขอบล่างหน้าจอ - แก้ไขใหม่ */
 .content-wrapper {
     position: absolute;
     top: calc(50px + 35vh); /* เริ่มที่ด้านล่างของรูปภาพ (รวมความสูงของ top-bar) */
-    bottom: 82px; /* เว้นระยะจากแถบด้านล่าง (height of bottom-bar + padding) */
+    bottom: 0; /* ขยายไปจนถึงขอบล่างของหน้าจอ */
     display: flex;
     flex-direction: column;
     justify-content: center; /* จัดให้เนื้อหาอยู่ตรงกลางในแนวตั้ง */
     width: 100%;
-    padding-top: 10px;
+    padding: 0;
 }
 
 /* ส่วนของเมนูกริด */
@@ -124,45 +124,6 @@ body {
     background-color: #d56e4c; /* สีเข้มกว่าเล็กน้อย */
 }
 
-/* แถบไอคอนด้านล่าง */
-.bottom-bar {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 12px 16px;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
-    height: 82px; /* กำหนดความสูงชัดเจน (58px + padding) */
-    box-sizing: border-box;
-}
-
-.bottom-icon {
-    width: 58px;
-    height: 58px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 18px;
-    font-weight: bold;
-    transition: all 0.2s;
-    background-color: #fcf6ea; /* พื้นหลังเหมือนกับพื้นหลังหลัก */
-    color: #e37b58; /* สีตัวอักษรเหมือนกับสีไอคอน */
-    border: 2px solid #e37b58; /* เพิ่มเส้นขอบเพื่อให้ดูเด่นชัด */
-}
-
-.bottom-icon:hover {
-    background-color: #faecd9;
-}
-
-.bottom-icon:active {
-    background-color: #f9e3c7;
-    transform: translateY(1px);
-}
-
 /* ตัวบอกตำแหน่งสไลด์ */
 .carousel-indicators {
     bottom: 12px;
@@ -190,9 +151,5 @@ body {
     
     .menu-icon span {
         font-size: 10px;
-    }
-    
-    .bottom-icon i {
-        font-size: 24px;
     }
 }
